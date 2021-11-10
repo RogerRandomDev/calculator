@@ -1,0 +1,25 @@
+textarea {
+  resize: none;
+  width: fit-content;
+  height: fit-content;
+}
+body {
+  margin: 0 auto;
+}
+#output {
+  user-select: none;
+}
+.calc_holder {
+  display: grid;
+  grid-template-areas: 's s s s', 's s s s', 's s s s', '1 2 3 plu',
+    '4 5 6 minu', '7 8 9 mul', '. 0 . sla';
+}
+.calc_button {
+  font-size: xx-large;
+}
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
