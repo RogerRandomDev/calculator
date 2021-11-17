@@ -5,21 +5,32 @@ textarea {
 }
 body {
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 #output {
   user-select: none;
 }
 .calc_holder {
-  display: grid;
-  grid-template-areas: 's s s s', 's s s s', 's s s s', '1 2 3 plu',
-    '4 5 6 minu', '7 8 9 mul', '. 0 . sla';
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1fr 1fr 1fr;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 .calc_button {
   font-size: xx-large;
 }
-.screen {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
+.buttons {
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  grid-template-columns: 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem;
+}
+.buttons > * {
+  justify-self: stretch;
+  align-self: stretch;
 }
